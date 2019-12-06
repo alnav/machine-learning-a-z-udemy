@@ -14,7 +14,7 @@ import pandas as pd
 # Import dataset
 dataset = pd.read_csv('Data.csv')
 X = dataset.iloc[:, :-1].values # on lecture is was [:, :-1].values, not supported anymore
-Y = dataset.iloc[:, -1] # or [:, 3]
+y = dataset.iloc[:, -1] # or [:, 3]
 
 # Deal with missing data
 from sklearn.impute import SimpleImputer
@@ -44,14 +44,14 @@ X = np.array(ct.fit_transform(X), dtype=np.float)
 #X = oneHotEncoder.fit_transform(X).toarray()
 
 # for Y, no need for OneHotEncoder as only 2 categories
-labelEncoder_Y = LabelEncoder()
-Y = labelEncoder_Y.fit_transform(Y)
+labelEncoder_y = LabelEncoder()
+y = labelEncoder_y.fit_transform(y)
 # 0 is no, 1 is yes
 
 # Split dataset into training set and test set
 from sklearn.model_selection import train_test_split
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, 
                                                     random_state = 0)
 
 # Feature scaling
