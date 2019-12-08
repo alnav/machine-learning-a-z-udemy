@@ -6,7 +6,6 @@
   - answer or outcome
 
 ## Importing libraries
-  # Import libraries
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -64,6 +63,7 @@ X = np.array(ct.fit_transform(X), dtype=np.float)
 labelEncoder_y = LabelEncoder()
 y = labelEncoder_y.fit_transform(y)
 ```
+
 ## Split dataset into training set and test set
 ```python
 from sklearn.model_selection import train_test_split
