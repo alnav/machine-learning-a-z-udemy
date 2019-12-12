@@ -32,7 +32,7 @@ Categorical variables don't fit into equation, need to create dummy variable
 X = X[:, 1:] # remove one column
 ```
 
-### Always omit one dummy variable, that is contained in the constant (default state)
+### Always omit one dummy variable, it will be contained in the constant (default state)
 
 ## P-value
 - p-value is NOT the probability the claim is true

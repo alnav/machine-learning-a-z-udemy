@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec 10 19:52:07 2019
+Created on Thu Dec 12 20:58:55 2019
 
 @author: ale
 """
@@ -26,9 +26,9 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
-# Fitting Logistic Regression to training set
-from sklearn.linear_model import LogisticRegression
-classifier = LogisticRegression(random_state = 0)
+# Fitting K neighbors classifier to training set
+from sklearn.neighbors import KNeighborsClassifier
+classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2) # for euclidean distance
 classifier.fit(X_train, y_train)
 
 # Predicting the test set results
