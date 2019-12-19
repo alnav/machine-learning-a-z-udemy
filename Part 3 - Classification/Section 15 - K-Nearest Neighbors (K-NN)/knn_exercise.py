@@ -52,7 +52,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], 
                 c = ListedColormap(('yellow', 'blue'))(i), label = j)
-plt.title('Logistic Regression (training set)')
+plt.title('K-Nearest neighbors (training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
@@ -72,7 +72,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], 
                 c = ListedColormap(('yellow', 'blue'))(i), label = j)
-plt.title('Logistic Regression (test set)')
+plt.title('K-Nearest neighbors (test set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
