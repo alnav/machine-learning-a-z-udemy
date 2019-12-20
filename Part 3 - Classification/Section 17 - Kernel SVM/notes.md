@@ -39,4 +39,11 @@ $K(\overrightarrow{x},\overrightarrow{l^i}) = e-\frac{||\overrightarrow{x}-\over
   - $K(X,Y) = (y \cdot X^TY + r)^d,y > 0$
 
 
+# Example
 
+```python
+# Fitting classifier to the Training set
+from sklearn.svm import SVC
+classifier = SVC(kernel = 'rbf', random_state = 0)
+classifier.fit(X_train, y_train)
+```
