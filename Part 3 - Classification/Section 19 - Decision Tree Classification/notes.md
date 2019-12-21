@@ -15,8 +15,10 @@ How it works:
 - can be used in random forest and gradient boosting
 
 # Example
+
 ```python
 from sklearn.tree import DecisionTreeClassifier
 classifier = DecisionTreeClassifier(criterion = 'entropy')
 classifier.fit(X_train, y_train)
 ```
+
