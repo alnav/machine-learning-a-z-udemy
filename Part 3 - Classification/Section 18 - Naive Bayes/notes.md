@@ -92,3 +92,11 @@ Which category has higher probability for certain features?
   - one less calculation to perform
   - $P(A|B) = P(B|A) * P(A)$
   - only if comparing the two!
+
+# Example
+
+```python
+from sklearn.nave_bayes import GaussianNB
+classifier = GaussianNB()
+classifier.fit(X_test, y_test)
+```
